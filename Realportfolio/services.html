@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Louis Dev - Premium digital services: web development, UI/UX design, branding, and strategy. Client stories and process.">
+    <title>Services & Process | Louis Dev</title>
+      <link rel="icon" type="image/png" href="img/portfolio-img.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: { DEFAULT: '#7C3AED', light: '#A855F7', dark: '#6D28D9' },
+                        secondary: { DEFAULT: '#06B6D4', light: '#22D3EE', dark: '#0891B2' },
+                        accent: { DEFAULT: '#22C55E', light: '#4ADE80', dark: '#16A34A' },
+                        highlight: { DEFAULT: '#F59E0B', light: '#FBBF24' },
+                        surface: { DEFAULT: '#0F172A', light: '#1E293B', dark: '#050816' },
+                    },
+                    animation: {
+                        'float': 'float 8s ease-in-out infinite',
+                        'float-delayed': 'float 8s ease-in-out 4s infinite',
+                        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+                        'fade-up': 'fadeUp 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '33%': { transform: 'translateY(-20px) rotate(1deg)' },
+                            '66%': { transform: 'translateY(-5px) rotate(-1deg)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(124,58,237,0.2)' },
+                            '50%': { boxShadow: '0 0 40px rgba(124,58,237,0.4)' },
+                        },
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#050816] text-[#F8FAFC] font-sans antialiased">
+
+    <a href="#services" class="skip-link">Skip to main content</a>
+    <div id="page-overlay" class="fixed inset-0 z-[9999] bg-[#050816] pointer-events-none opacity-0 transition-opacity duration-400"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <header id="navbar" class="navbar" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+                Louis<span class="text-primary">Dev</span>
+            </a>
+            <nav class="nav-menu" aria-label="Main navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                 <a href="journey.html" class="nav-link">Journey</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-right">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <i id="theme-icon" class="fa-solid fa-sun"></i>
+                </button>
+                <a href="contact.html" class="cta-button desktop-only">Get In Touch <i class="fa-solid fa-arrow-right"></i></a>
+                <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-overlay" id="mobileOverlay"></div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <a href="index.html" class="logo"><div class="logo-icon"><i class="fa-solid fa-cube"></i></div>Louis<span class="text-primary">Dev</span></a>
+                <button class="mobile-close" id="mobileClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="mobile-links">
+                <a href="index.html" class="mobile-link">Home</a>
+                <a href="about.html" class="mobile-link">About</a>
+                <a href="projects.html" class="mobile-link">Projects</a>
+                <a href="services.html" class="mobile-link active">Services</a>
+                <a href="journey.html" class="mobile-link">Journey</a>
+                <a href="contact.html" class="mobile-link">Contact</a>
+            </div>
+            <div class="mobile-cta">
+                <a href="contact.html" class="cta-button" style="width:100%;justify-content:center;">Get In Touch <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20 lg:pt-24">
+        <!-- ===== DIGITAL SERVICES (expanded cards) ===== -->
+        <section id="services" class="py-16 lg:py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="reveal text-sm font-semibold text-secondary uppercase tracking-widest">What I Do</span>
+                    <h2 class="reveal font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 mb-6">Digital Services</h2>
+                    <p class="reveal text-[#94A3B8] max-w-3xl mx-auto text-lg leading-relaxed">
+                        From concept to deployment, I build digital experiences that leave a lasting impression and drive real results. Each service is tailored to your brand and business goals.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <!-- Portfolio Websites -->
+                    <div class="reveal service-card glass-card rounded-2xl p-6 group hover:scale-[1.02] transition-all duration-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-all">
+                                <i class="fa-solid fa-briefcase text-2xl text-primary"></i>
+                            </div>
+                            <h3 class="font-display text-xl font-bold mb-3">Portfolio Websites</h3>
+                            <p class="text-[#94A3B8] leading-relaxed mb-4">Cinematic personal brands that turn visitors into clients. I create immersive, narrative-driven portfolio experiences that showcase your work in the best possible light.</p>
+                            <ul class="space-y-2 text-sm text-[#94A3B8]">
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Unique scroll‑based storytelling</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> CMS integration for easy updates</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> SEO‑optimized & lightning fast</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Custom animations & interactions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Restaurant Websites -->
+                    <div class="reveal service-card glass-card rounded-2xl p-6 group hover:scale-[1.02] transition-all duration-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-all">
+                                <i class="fa-solid fa-utensils text-2xl text-secondary"></i>
+                            </div>
+                            <h3 class="font-display text-xl font-bold mb-3">Restaurant Websites</h3>
+                            <p class="text-[#94A3B8] leading-relaxed mb-4">Bringing dining experiences to the screen. I design elegant, appetite‑driven websites that handle reservations, menus, and ambiance seamlessly.</p>
+                            <ul class="space-y-2 text-sm text-[#94A3B8]">
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Interactive menus & photo galleries</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Online booking system integration</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Mobile‑first, touch‑friendly design</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> SEO for local visibility</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Landing Pages -->
+                    <div class="reveal service-card glass-card rounded-2xl p-6 group hover:scale-[1.02] transition-all duration-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-all">
+                                <i class="fa-solid fa-rocket text-2xl text-accent"></i>
+                            </div>
+                            <h3 class="font-display text-xl font-bold mb-3">Landing Pages</h3>
+                            <p class="text-[#94A3B8] leading-relaxed mb-4">Conversion‑focused pages that turn traffic into customers. I build persuasive, data‑driven landing pages for campaigns, SaaS, and product launches.</p>
+                            <ul class="space-y-2 text-sm text-[#94A3B8]">
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> A/B tested layouts & copy placement</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Fast load times (under 2s)</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Responsive & accessible design</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Analytics & tracking setup</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Business Websites -->
+                    <div class="reveal service-card glass-card rounded-2xl p-6 group hover:scale-[1.02] transition-all duration-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-highlight/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-xl bg-highlight/10 flex items-center justify-center mb-6 group-hover:bg-highlight/20 transition-all">
+                                <i class="fa-solid fa-building text-2xl text-highlight"></i>
+                            </div>
+                            <h3 class="font-display text-xl font-bold mb-3">Business Websites</h3>
+                            <p class="text-[#94A3B8] leading-relaxed mb-4">Corporate doesn't mean boring. I craft authoritative, trust‑building websites for agencies, firms, and modern businesses that want to stand out.</p>
+                            <ul class="space-y-2 text-sm text-[#94A3B8]">
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Custom WordPress or headless CMS</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Team & service showcase layouts</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Lead capture & CRM integration</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Ongoing maintenance & support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- UI/UX Design -->
+                    <div class="reveal service-card glass-card rounded-2xl p-6 group hover:scale-[1.02] transition-all duration-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-xl bg-pink-500/10 flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition-all">
+                                <i class="fa-solid fa-pen-ruler text-2xl text-pink-400"></i>
+                            </div>
+                            <h3 class="font-display text-xl font-bold mb-3">UI/UX Design</h3>
+                            <p class="text-[#94A3B8] leading-relaxed mb-4">From wireframes to high‑fidelity prototypes, I design intuitive, accessible interfaces that feel natural and look stunning.</p>
+                            <ul class="space-y-2 text-sm text-[#94A3B8]">
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> User research & persona mapping</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Interactive prototypes in Figma</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Design systems & component libraries</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Usability testing & iteration</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Frontend Development -->
+                    <div class="reveal service-card glass-card rounded-2xl p-6 group hover:scale-[1.02] transition-all duration-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-xl bg-violet-500/10 flex items-center justify-center mb-6 group-hover:bg-violet-500/20 transition-all">
+                                <i class="fa-solid fa-code text-2xl text-violet-400"></i>
+                            </div>
+                            <h3 class="font-display text-xl font-bold mb-3">Frontend Development</h3>
+                            <p class="text-[#94A3B8] leading-relaxed mb-4">Turning complex designs into robust, scalable applications using React, Next.js, TypeScript, and modern best practices.</p>
+                            <ul class="space-y-2 text-sm text-[#94A3B8]">
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Pixel‑perfect implementation</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Performance optimization (90+ Lighthouse)</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> API integration & state management</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Testing (unit, integration, E2E)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Website Redesign -->
+                    <div class="reveal service-card glass-card rounded-2xl p-6 group hover:scale-[1.02] transition-all duration-500 relative overflow-hidden md:col-span-2 lg:col-span-1">
+                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-all">
+                                <i class="fa-solid fa-rotate text-2xl text-cyan-400"></i>
+                            </div>
+                            <h3 class="font-display text-xl font-bold mb-3">Website Redesign</h3>
+                            <p class="text-[#94A3B8] leading-relaxed mb-4">A complete visual and technical overhaul. I modernize outdated sites, improve UX, and boost performance without losing your brand essence.</p>
+                            <ul class="space-y-2 text-sm text-[#94A3B8]">
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Modern UI with improved accessibility</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Migration to faster tech stack</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Content restructuring & SEO audit</li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-accent mt-1 text-xs"></i> Guaranteed performance uplift</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WHY WORK WITH ME ===== -->
+        <section class="py-16 lg:py-24 bg-[#0F172A]/40 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="reveal text-sm font-semibold text-primary uppercase tracking-widest">Why Louis Dev</span>
+                    <h2 class="reveal font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 mb-6">A partner, not just a provider</h2>
+                    <p class="reveal text-[#94A3B8] max-w-3xl mx-auto text-lg">Every project is a collaboration. I bring strategic thinking, technical excellence, and obsessive attention to detail.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="reveal text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5">
+                            <i class="fa-solid fa-bolt text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3">Fast Turnaround</h3>
+                        <p class="text-[#94A3B8]">I value your time. Clear timelines, rapid prototyping, and weekly updates ensure we launch quickly without sacrificing quality.</p>
+                    </div>
+                    <div class="reveal text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mx-auto mb-5">
+                            <i class="fa-solid fa-comments text-2xl text-secondary"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3">Transparent Collaboration</h3>
+                        <p class="text-[#94A3B8]">No black boxes. You'll have direct access to project boards, real‑time previews, and a dedicated Slack channel.</p>
+                    </div>
+                    <div class="reveal text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-5">
+                            <i class="fa-solid fa-shield-halved text-2xl text-accent"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3">Future‑Proof Code</h3>
+                        <p class="text-[#94A3B8]">Clean architecture, automated tests, and scalable infrastructure. Your product will grow without technical debt.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROCESS ===== -->
+        <section class="py-16 lg:py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="reveal text-sm font-semibold text-highlight uppercase tracking-widest">How It Works</span>
+                    <h2 class="reveal font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 mb-6">My design process</h2>
+                    <p class="reveal text-[#94A3B8] max-w-3xl mx-auto text-lg">A proven workflow that transforms ideas into polished digital products.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="reveal glass-card rounded-2xl p-6 text-center relative overflow-hidden group">
+                        <div class="absolute -top-6 right-4 text-7xl font-display font-bold text-primary/10 group-hover:text-primary/20 transition-all">01</div>
+                        <div class="relative z-10">
+                            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-lightbulb text-xl text-primary"></i>
+                            </div>
+                            <h3 class="font-display font-bold mb-2">Discovery</h3>
+                            <p class="text-sm text-[#94A3B8]">We discuss goals, audience, and brand. I audit your current digital presence and define success metrics.</p>
+                        </div>
+                    </div>
+                    <div class="reveal glass-card rounded-2xl p-6 text-center relative overflow-hidden group">
+                        <div class="absolute -top-6 right-4 text-7xl font-display font-bold text-secondary/10 group-hover:text-secondary/20 transition-all">02</div>
+                        <div class="relative z-10">
+                            <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-pencil text-xl text-secondary"></i>
+                            </div>
+                            <h3 class="font-display font-bold mb-2">Design</h3>
+                            <p class="text-sm text-[#94A3B8]">Wireframes, high‑fidelity mockups, and interactive prototypes. You'll see exactly how it looks before we code.</p>
+                        </div>
+                    </div>
+                    <div class="reveal glass-card rounded-2xl p-6 text-center relative overflow-hidden group">
+                        <div class="absolute -top-6 right-4 text-7xl font-display font-bold text-accent/10 group-hover:text-accent/20 transition-all">03</div>
+                        <div class="relative z-10">
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-code text-xl text-accent"></i>
+                            </div>
+                            <h3 class="font-display font-bold mb-2">Development</h3>
+                            <p class="text-sm text-[#94A3B8]">Pixel‑perfect implementation, animations, and integrations. Regular demos keep you in the loop.</p>
+                        </div>
+                    </div>
+                    <div class="reveal glass-card rounded-2xl p-6 text-center relative overflow-hidden group">
+                        <div class="absolute -top-6 right-4 text-7xl font-display font-bold text-highlight/10 group-hover:text-highlight/20 transition-all">04</div>
+                        <div class="relative z-10">
+                            <div class="w-12 h-12 rounded-xl bg-highlight/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-rocket text-xl text-highlight"></i>
+                            </div>
+                            <h3 class="font-display font-bold mb-2">Launch & Grow</h3>
+                            <p class="text-sm text-[#94A3B8]">Deployment, performance monitoring, and post‑launch support. I'm with you for the long run.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-white/5 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white font-bold text-sm">L</div>
+                    <span class="font-display font-bold text-lg">Louis<span class="text-primary">Dev</span></span>
+                </a>
+                <p class="text-sm text-[#94A3B8]">&copy; 2026 Louis Dev. All rights reserved.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/chikadibiauchechukwu-collab" aria-label="GitHub" class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"><i class="fa-brands fa-github text-lg"></i></a>
+                    <a href="https://www.linkedin.com/in/louis-betrands-840a633a2" aria-label="LinkedIn" class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+                    <a href="https://x.com/Chikadibia24062" aria-label="Twitter" class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/2348107620605" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-accent hover:bg-accent-dark shadow-xl shadow-accent/30 hover:shadow-accent/50 transition-all duration-300 hover:scale-110 flex items-center justify-center text-white text-xl">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

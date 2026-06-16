@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Louis Dev - My learning journey from beginner to frontend engineer and UI/UX designer.">
+    <title>My Journey | Louis Dev</title>
+      <link rel="icon" type="image/png" href="img/portfolio-img.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: { DEFAULT: '#7C3AED', light: '#A855F7', dark: '#6D28D9' },
+                        secondary: { DEFAULT: '#06B6D4', light: '#22D3EE' },
+                        accent: { DEFAULT: '#22C55E', light: '#4ADE80' },
+                        highlight: { DEFAULT: '#F59E0B', light: '#FBBF24' },
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#050816] text-[#F8FAFC] font-sans antialiased">
+
+    <a href="#journey" class="skip-link">Skip to main content</a>
+    <div id="page-overlay" class="fixed inset-0 z-[9999] bg-[#050816] pointer-events-none opacity-0 transition-opacity duration-400"></div>
+
+     <!-- ==================== NAVIGATION ==================== -->
+<header id="navbar" class="navbar" role="banner">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+            <span>Louis<span class="text-primary">Dev</span></span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="nav-menu" aria-label="Main navigation">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="journey.html" class="nav-link">Journey</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Side -->
+        <div class="nav-right">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+                <i id="theme-icon" class="fa-solid fa-sun"></i>
+            </button>
+            <a href="contact.html" class="cta-button desktop-only">
+                Get In Touch <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+                Louis<span class="text-primary">Dev</span>
+            </a>
+            <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="mobile-links">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="projects.html" class="mobile-link">Projects</a>
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="journey.html" class="mobile-link">Journey</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+        <div class="mobile-cta">
+            <a href="contact.html" class="cta-button" style="width:100%;justify-content:center;">
+                Get In Touch <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</header>
+    
+
+    <main class="pt-20 lg:pt-24">
+        <!-- Hero -->
+        <section class="py-16 lg:py-24 relative overflow-hidden text-center">
+            <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+                <div class="absolute -top-20 right-0 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[120px]"></div>
+                <div class="absolute bottom-0 left-0 w-[350px] h-[350px] rounded-full bg-secondary/5 blur-[100px]"></div>
+            </div>
+            <div class="relative max-w-4xl mx-auto px-4">
+                <span class="reveal text-sm font-semibold text-highlight uppercase tracking-widest">My Path</span>
+                <h1 class="reveal font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 mb-6">
+                    The road to becoming a developer
+                </h1>
+                <p class="reveal text-[#94A3B8] max-w-2xl mx-auto text-lg">
+                    I wasn't born writing code. I learned through mentorship, persistence, and a deep passion for building things.
+                </p>
+            </div>
+        </section>
+
+        <!-- Journey Timeline -->
+        <section class="py-16 lg:py-24 bg-[#0F172A]/30">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative">
+                    <!-- vertical line -->
+                    <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-white/5 md:-translate-x-px" aria-hidden="true"></div>
+
+                    <!-- Step 1: The spark -->
+                    <div class="reveal relative flex flex-col md:flex-row items-start gap-4 md:gap-10 mb-16">
+                        <div class="md:w-1/2 md:text-right md:pr-8">
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-2">2023</span>
+                            <h3 class="font-display text-xl font-bold">The spark of curiosity</h3>
+                            <p class="text-sm text-[#94A3B8] mt-2">I started tinkering with HTML and CSS after seeing a friend's personal website. It felt like magic – I wanted to create that same feeling for others.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-primary border-4 border-[#0F172A] shadow-lg shadow-primary/30 -translate-x-1/2 z-10"></div>
+                        <div class="md:w-1/2 md:pl-8"></div>
+                    </div>
+
+                    <!-- Step 2: Mentorship from a frontend engineer -->
+                    <div class="reveal relative flex flex-col md:flex-row items-start gap-4 md:gap-10 mb-16">
+                        <div class="md:w-1/2 md:text-right md:pr-8 order-2 md:order-1">
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-secondary/10 text-secondary mb-2">2025</span>
+                            <h3 class="font-display text-xl font-bold">Mentored by a frontend engineer named Cisco</h3>
+                            <p class="text-sm text-[#94A3B8] mt-2">I was lucky to find a senior frontend engineer who took me under his wing. He taught me JavaScript fundamentals, Git workflows, and how to debug like a pro. More importantly, he showed me how to think like an engineer.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-secondary border-4 border-[#0F172A] shadow-lg shadow-secondary/30 -translate-x-1/2 z-10 order-1 md:order-1"></div>
+                        <div class="md:w-1/2 md:pl-8 order-3"></div>
+                    </div>
+
+                    <!-- Step 3: UI/UX design influence -->
+                    <div class="reveal relative flex flex-col md:flex-row items-start gap-4 md:gap-10 mb-16">
+                        <div class="md:w-1/2 md:text-right md:pr-8">
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-accent/10 text-accent mb-2">2022</span>
+                            <h3 class="font-display text-xl font-bold">Learning design from a UI/UX expert</h3>
+                            <p class="text-sm text-[#94A3B8] mt-2">I crossed paths with a talented UI/UX designer who opened my eyes to the world of design systems, user research, and prototyping. She taught me how to see interfaces from the user's perspective – a skill that transformed my development work.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-accent border-4 border-[#0F172A] shadow-lg shadow-accent/30 -translate-x-1/2 z-10"></div>
+                        <div class="md:w-1/2 md:pl-8"></div>
+                    </div>
+
+                    <!-- Step 4: First frameworks -->
+                    <div class="reveal relative flex flex-col md:flex-row items-start gap-4 md:gap-10 mb-16">
+                        <div class="md:w-1/2 md:text-right md:pr-8 order-2 md:order-1">
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-highlight/10 text-highlight mb-2">2026</span>
+                            <h3 class="font-display text-xl font-bold">Diving into frameworks</h3>
+                            <p class="text-sm text-[#94A3B8] mt-2">After getting comfortable with vanilla JavaScript, I dove headfirst into React. The component model clicked instantly. From there I explored Next.js, TypeScript, and Tailwind CSS – each one adding a new layer to my stack.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-highlight border-4 border-[#0F172A] shadow-lg shadow-highlight/30 -translate-x-1/2 z-10 order-1 md:order-1"></div>
+                        <div class="md:w-1/2 md:pl-8 order-3"></div>
+                    </div>
+
+                    <!-- Step 5: Mastery & today -->
+                    <div class="reveal relative flex flex-col md:flex-row items-start gap-4 md:gap-10">
+                        <div class="md:w-1/2 md:text-right md:pr-8">
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-2">Pesent – Present</span>
+                            <h3 class="font-display text-xl font-bold">UI Engineer & beyond</h3>
+                            <p class="text-sm text-[#94A3B8] mt-2">Today I build production‑grade applications with React, Next.js, Node.js, and TypeScript. I've worked with startups, agencies, and global brands. And I'm still learning every day – because the journey never really ends.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-primary border-4 border-[#0F172A] shadow-lg shadow-primary/30 -translate-x-1/2 z-10"></div>
+                        <div class="md:w-1/2 md:pl-8"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills gained -->
+        <section class="py-16 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span class="reveal text-sm font-semibold text-primary uppercase tracking-widest">What I Learned</span>
+                <h2 class="reveal font-display text-3xl sm:text-4xl font-bold mt-4 mb-12">A toolkit built through experience</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <div class="reveal glass-card rounded-xl p-4 flex flex-col items-center gap-2">
+                        <i class="fa-brands fa-html5 text-3xl text-orange-400"></i>
+                        <span class="text-sm font-medium">HTML</span>
+                    </div>
+                    <div class="reveal glass-card rounded-xl p-4 flex flex-col items-center gap-2">
+                        <i class="fa-brands fa-css3-alt text-3xl text-blue-400"></i>
+                        <span class="text-sm font-medium">CSS</span>
+                    </div>
+                    <div class="reveal glass-card rounded-xl p-4 flex flex-col items-center gap-2">
+                        <i class="fa-brands fa-js text-3xl text-yellow-400"></i>
+                        <span class="text-sm font-medium">JavaScript</span>
+                    </div>
+                    <div class="reveal glass-card rounded-xl p-4 flex flex-col items-center gap-2">
+                        <i class="fa-brands fa-react text-3xl text-cyan-400"></i>
+                        <span class="text-sm font-medium">React</span>
+                    </div>
+                    <div class="reveal glass-card rounded-xl p-4 flex flex-col items-center gap-2">
+                        <i class="fa-brands fa-node-js text-3xl text-green-400"></i>
+                        <span class="text-sm font-medium">Node.js</span>
+                    </div>
+                    <div class="reveal glass-card rounded-xl p-4 flex flex-col items-center gap-2">
+                        <i class="fa-brands fa-figma text-3xl text-purple-400"></i>
+                        <span class="text-sm font-medium">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-12 lg:py-16">
+            <div class="max-w-2xl mx-auto px-4 text-center">
+                <div class="glass-card rounded-3xl p-10 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <h2 class="reveal font-display text-3xl font-bold mb-4">Every great project starts with a conversation</h2>
+                        <p class="reveal text-[#94A3B8] mb-6">Let's write the next chapter together.</p>
+                        <a href="contact.html" class="reveal btn-primary px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-primary to-primary-dark hover:from-primary-light hover:to-primary shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2">
+                            Start a Conversation <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 py-10">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white font-bold text-sm">L</div>
+                <span class="font-display font-bold text-lg">Louis<span class="text-primary">Dev</span></span>
+            </a>
+            <p class="text-sm text-[#94A3B8]">&copy; 2026 Louis Dev. All rights reserved.</p>
+            <div class="flex items-center gap-4">
+                <a href="https://github.com/chikadibiauchechukwu-collab" aria-label="GitHub" class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="https://www.linkedin.com/in/louis-betrands-840a633a2" aria-label="LinkedIn" class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+                <a href="https://x.com/Chikadibia24062" aria-label="Twitter" class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/2348107620605" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-accent hover:bg-accent-dark shadow-xl shadow-accent/30 hover:shadow-accent/50 transition-all duration-300 hover:scale-110 flex items-center justify-center text-white text-xl">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

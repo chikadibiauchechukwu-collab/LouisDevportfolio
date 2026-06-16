@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Louis Dev - Frontend Engineer & UI Architect. Building high-performance web applications with React, TypeScript, and modern JavaScript."
+    />
+    <title>Louis Dev | Frontend Engineer & UI Architect</title>
+      <link rel="icon" type="image/png" href="img/portfolio-img.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            colors: {
+              primary: {
+                DEFAULT: "#7C3AED",
+                light: "#A855F7",
+                dark: "#6D28D9",
+              },
+              secondary: {
+                DEFAULT: "#06B6D4",
+                light: "#22D3EE",
+                dark: "#0891B2",
+              },
+              accent: { DEFAULT: "#22C55E", light: "#4ADE80", dark: "#16A34A" },
+              highlight: { DEFAULT: "#F59E0B", light: "#FBBF24" },
+              surface: {
+                DEFAULT: "#0F172A",
+                light: "#1E293B",
+                dark: "#050816",
+              },
+            },
+            animation: {
+              float: "float 8s ease-in-out infinite",
+              "float-delayed": "float 8s ease-in-out 4s infinite",
+              "pulse-glow": "pulseGlow 3s ease-in-out infinite",
+              "fade-up": "fadeUp 0.6s ease-out forwards",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-[#050816] text-[#F8FAFC] font-sans antialiased">
+    <a href="#home" class="skip-link">Skip to main content</a>
+    <div
+      id="page-overlay"
+      class="fixed inset-0 z-[9999] bg-[#050816] pointer-events-none opacity-0 transition-opacity duration-400"
+    ></div>
+
+    <!-- NAVIGATION -->
+    <header id="navbar" class="navbar" role="banner">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+          <span>Louis<span class="text-primary">Dev</span></span>
+        </a>
+        <nav class="nav-menu" aria-label="Main navigation">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="journey.html" class="nav-link">Journey</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="nav-right">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle light/dark mode"
+          >
+            <i id="theme-icon" class="fa-solid fa-sun"></i>
+          </button>
+          <a href="contact.html" class="cta-button desktop-only"
+            >Get In Touch <i class="fa-solid fa-arrow-right"></i
+          ></a>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-overlay" id="mobileOverlay"></div>
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+          <a href="index.html" class="logo"
+            ><div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+            Louis<span class="text-primary">Dev</span></a
+          >
+          <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="mobile-links">
+          <a href="index.html" class="mobile-link active">Home</a>
+          <a href="about.html" class="mobile-link">About</a>
+          <a href="projects.html" class="mobile-link">Projects</a>
+          <a href="services.html" class="mobile-link">Services</a>
+          <a href="journey.html" class="mobile-link">Journey</a>
+          <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+        <div class="mobile-cta">
+          <a
+            href="contact.html"
+            class="cta-button"
+            style="width: 100%; justify-content: center"
+            >Get In Touch <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        id="home"
+        class="relative min-h-screen flex items-center overflow-hidden pt-16 lg:pt-20"
+      >
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+          <div
+            class="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[140px] animate-float"
+          ></div>
+          <div
+            class="absolute top-1/3 -left-40 w-[500px] h-[500px] rounded-full bg-secondary/8 blur-[120px] animate-float-delayed"
+          ></div>
+          <div
+            class="absolute bottom-20 right-1/4 w-[350px] h-[350px] rounded-full bg-accent/6 blur-[100px] animate-float"
+          ></div>
+        </div>
+        <div
+          class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32"
+        >
+          <div class="max-w-3xl">
+            <div
+              class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm font-medium mb-8"
+            >
+              <span class="relative flex h-2.5 w-2.5">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent"
+                ></span>
+              </span>
+              Available for freelance &amp; remote work
+            </div>
+            <h1
+              class="reveal font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6"
+            >
+              Building
+              <span class="gradient-text">digital experiences</span> that drive
+              results
+            </h1>
+            <p
+              class="reveal text-lg sm:text-xl text-[#94A3B8] max-w-xl mb-10 leading-relaxed"
+            >
+              I'm Anyanwu Chikadibia Coding Name: Louis Dev, a frontend engineer and UI architect specializing
+              in React, TypeScript, and performance‑focused web applications. I
+              help startups and businesses create products users love.
+            </p>
+            <div class="reveal flex flex-wrap gap-4">
+              <a
+                href="projects.html"
+                class="btn-primary px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-primary to-primary-dark hover:from-primary-light hover:to-primary shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                View My Work <i class="fa-solid fa-arrow-right text-sm"></i>
+              </a>
+              <a
+                href="contact.html"
+                class="btn-glass px-8 py-4 rounded-xl font-semibold glass-card hover:bg-white/8 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <i class="fa-solid fa-paper-plane"></i> Get In Touch
+              </a>
+              <a
+                href="Louis CV"
+                id="download-cv-btn"
+                class="btn-outline px-8 py-4 rounded-xl font-semibold border border-white/10 hover:border-primary/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <i class="fa-solid fa-download"></i> Download CV
+              </a>
+            </div>
+            <div
+              class="reveal flex items-center gap-8 mt-12 pt-8 border-t border-white/5"
+            >
+              <div class="flex -space-x-3">
+                <div
+                  class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary-light border-2 border-[#050816] flex items-center justify-center text-white text-xs font-bold"
+                >
+                  JD
+                </div>
+                <div
+                  class="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-secondary-dark border-2 border-[#050816] flex items-center justify-center text-white text-xs font-bold"
+                >
+                  MK
+                </div>
+                <div
+                  class="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-accent-dark border-2 border-[#050816] flex items-center justify-center text-white text-xs font-bold"
+                >
+                  SL
+                </div>
+                <div
+                  class="w-10 h-10 rounded-full bg-gradient-to-br from-highlight to-highlight-light border-2 border-[#050816] flex items-center justify-center text-white text-xs font-bold"
+                >
+                  +
+                </div>
+              </div>
+              <p class="text-sm text-[#94A3B8]">
+                <span class="font-semibold text-[#F8FAFC]" data-target="15"
+                  >15</span
+                >+ happy clients worldwide
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#94A3B8]"
+        >
+          <span class="text-xs font-medium tracking-widest uppercase"
+            >Scroll</span
+          >
+          <div
+            class="w-5 h-8 rounded-full border-2 border-white/5 flex justify-center"
+          >
+            <div
+              class="w-1 h-2.5 rounded-full bg-accent mt-1.5 animate-bounce"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Preview (enhanced) -->
+      <section class="py-20 lg:py-32 bg-[#0F172A]/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span
+            class="reveal text-sm font-semibold text-primary uppercase tracking-widest"
+            >About Me</span
+          >
+          <h2
+            class="reveal font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6"
+          >
+            A developer obsessed with craft
+          </h2>
+          <p class="reveal text-[#94A3B8] max-w-3xl mx-auto text-lg mb-10">
+            I blend engineering precision with design thinking to create
+            products that people love to use. With 6+ years of experience and
+            50+ projects delivered, I bring a seasoned perspective to every
+            collaboration.
+          </p>
+          <a
+            href="about.html"
+            class="reveal inline-flex items-center gap-2 px-8 py-4 rounded-xl glass-card text-primary font-semibold hover:bg-white/5 transition-all"
+            >Learn more about me <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </section>
+
+      <!-- Services Preview -->
+      <section class="py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <span
+              class="reveal text-sm font-semibold text-secondary uppercase tracking-widest"
+              >What I Do</span
+            >
+            <h2
+              class="reveal font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6"
+            >
+              Full‑stack digital services
+            </h2>
+            <p class="reveal text-[#94A3B8] max-w-3xl mx-auto text-lg">
+              From strategy to launch, I offer end‑to‑end services tailored to
+              your business goals.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div class="reveal glass-card rounded-2xl p-6 text-center">
+              <i class="fa-solid fa-code text-3xl text-primary mb-4"></i>
+              <h3 class="font-display text-xl font-bold mb-2">
+                Web Development
+              </h3>
+              <p class="text-[#94A3B8]">
+                React, Next.js, TypeScript – building fast, scalable
+                applications.
+              </p>
+            </div>
+            <div class="reveal glass-card rounded-2xl p-6 text-center">
+              <i class="fa-solid fa-palette text-3xl text-secondary mb-4"></i>
+              <h3 class="font-display text-xl font-bold mb-2">UI/UX Design</h3>
+              <p class="text-[#94A3B8]">
+                Human‑centered design with pixel‑perfect Figma prototypes.
+              </p>
+            </div>
+            <div class="reveal glass-card rounded-2xl p-6 text-center">
+              <i class="fa-solid fa-rocket text-3xl text-accent mb-4"></i>
+              <h3 class="font-display text-xl font-bold mb-2">
+                Performance Optimization
+              </h3>
+              <p class="text-[#94A3B8]">
+                Making your site lightning fast and accessible.
+              </p>
+            </div>
+          </div>
+          <div class="text-center">
+            <a
+              href="services.html"
+              class="reveal btn-primary px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-primary to-primary-dark hover:from-primary-light hover:to-primary shadow-lg shadow-primary/30 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >Explore All Services <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- CTA -->
+      <section class="py-16 lg:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="reveal font-display text-3xl sm:text-4xl font-bold mb-6">
+            Ready to build something exceptional?
+          </h2>
+          <p class="reveal text-[#94A3B8] mb-8">
+            Let's discuss your project. I'm just one message away.
+          </p>
+          <a
+            href="contact.html"
+            class="btn-primary px-10 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-primary to-primary-dark hover:from-primary-light hover:to-primary shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+            >Start a Conversation <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/5 py-10">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6"
+      >
+        <a href="index.html" class="logo"
+          ><div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+          Louis<span class="text-primary">Dev</span></a
+        >
+        <p class="text-sm text-[#94A3B8]">
+          &copy; 2026 Louis Dev. All rights reserved.
+        </p>
+        <div class="flex items-center gap-4">
+          <a
+            href="https://github.com/chikadibiauchechukwu-collab"
+            aria-label="GitHub"
+            class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"
+            ><i class="fa-brands fa-github text-lg"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/louis-betrands-840a633a2"
+            aria-label="LinkedIn"
+            class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"
+            ><i class="fa-brands fa-linkedin-in text-lg"></i
+          ></a>
+          <a
+            href="https://x.com/Chikadibia24062"
+            aria-label="Twitter"
+            class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"
+            ><i class="fa-brands fa-x-twitter text-lg"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/2348107620605"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+      class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-accent hover:bg-accent-dark shadow-xl shadow-accent/30 hover:shadow-accent/50 transition-all duration-300 hover:scale-110 flex items-center justify-center text-white text-xl"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

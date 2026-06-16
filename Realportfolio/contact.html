@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Louis Dev for freelance projects, collaborations, or job opportunities."
+    />
+    <title>Contact | Louis Dev</title>
+     <link rel="icon" type="image/png" href="img/portfolio-img.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            colors: {
+              primary: {
+                DEFAULT: "#7C3AED",
+                light: "#A855F7",
+                dark: "#6D28D9",
+              },
+              secondary: { DEFAULT: "#06B6D4", light: "#22D3EE" },
+              accent: { DEFAULT: "#22C55E", light: "#4ADE80" },
+              highlight: { DEFAULT: "#F59E0B" },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-[#050816] text-[#F8FAFC] font-sans antialiased">
+    <a href="#contact" class="skip-link">Skip to main content</a>
+    <div
+      id="page-overlay"
+      class="fixed inset-0 z-[9999] bg-[#050816] pointer-events-none opacity-0 transition-opacity duration-400"
+    ></div>
+
+    <!-- NAVIGATION -->
+    <header id="navbar" class="navbar" role="banner">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+          <span>Louis<span class="text-primary">Dev</span></span>
+        </a>
+        <nav class="nav-menu" aria-label="Main navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="journey.html" class="nav-link">Journey</a>
+          <a href="contact.html" class="nav-link active">Contact</a>
+        </nav>
+        <div class="nav-right">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle light/dark mode"
+          >
+            <i id="theme-icon" class="fa-solid fa-sun"></i>
+          </button>
+          <a href="contact.html" class="cta-button desktop-only"
+            >Get In Touch <i class="fa-solid fa-arrow-right"></i
+          ></a>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-overlay" id="mobileOverlay"></div>
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+          <a href="index.html" class="logo"
+            ><div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+            Louis<span class="text-primary">Dev</span></a
+          >
+          <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="mobile-links">
+          <a href="index.html" class="mobile-link">Home</a>
+          <a href="about.html" class="mobile-link">About</a>
+          <a href="projects.html" class="mobile-link">Projects</a>
+          <a href="services.html" class="mobile-link">Services</a>
+          <a href="journey.html" class="mobile-link">Journey</a>
+          <a href="contact.html" class="mobile-link active">Contact</a>
+        </div>
+        <div class="mobile-cta">
+          <a
+            href="contact.html"
+            class="cta-button"
+            style="width: 100%; justify-content: center"
+            >Get In Touch <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-20 lg:pt-24">
+      <section id="contact" class="py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span
+            class="reveal text-sm font-semibold text-primary uppercase tracking-widest"
+            >Get In Touch</span
+          >
+          <h1
+            class="reveal font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 mb-6"
+          >
+            Let's start a conversation
+          </h1>
+          <p class="reveal text-[#94A3B8] max-w-2xl text-lg mb-12">
+            Have a project in mind? I'm currently accepting new clients and
+            would love to hear about your vision.
+          </p>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div class="reveal">
+              <form
+                id="contact-form"
+                class="glass-card rounded-2xl p-8 space-y-6"
+                novalidate
+              >
+                <h3 class="font-display text-2xl font-bold mb-2">
+                  Send a message
+                </h3>
+                <p class="text-sm text-[#94A3B8] mb-4">
+                  Fill out the form and I'll get back to you within 24 hours.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="name" class="block text-sm font-medium mb-2"
+                      >Full Name <span class="text-red-500">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      placeholder="John Doe"
+                      class="w-full px-4 py-3 rounded-xl bg-white/3 border border-white/8 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-200 text-sm placeholder:text-[#94A3B8]/40"
+                    />
+                    <span class="error-msg text-xs text-red-400 mt-1 hidden"
+                      >Please enter your full name.</span
+                    >
+                  </div>
+                  <div>
+                    <label for="email" class="block text-sm font-medium mb-2"
+                      >Email Address <span class="text-red-500">*</span></label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      placeholder="john@example.com"
+                      class="w-full px-4 py-3 rounded-xl bg-white/3 border border-white/8 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-200 text-sm placeholder:text-[#94A3B8]/40"
+                    />
+                    <span class="error-msg text-xs text-red-400 mt-1 hidden"
+                      >Please enter a valid email.</span
+                    >
+                  </div>
+                </div>
+                <div>
+                  <label for="message" class="block text-sm font-medium mb-2"
+                    >Message <span class="text-red-500">*</span></label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows="5"
+                    placeholder="Tell me about your project..."
+                    class="w-full px-4 py-3 rounded-xl bg-white/3 border border-white/8 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-200 text-sm placeholder:text-[#94A3B8]/40 resize-none"
+                  ></textarea>
+                  <span class="error-msg text-xs text-red-400 mt-1 hidden"
+                    >Message must be at least 10 characters.</span
+                  >
+                </div>
+                <button
+                  type="submit"
+                  class="btn-primary w-full py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-primary to-primary-dark hover:from-primary-light hover:to-primary shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2"
+                >
+                  <span>Send Message</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+                <div id="form-success" class="hidden text-center py-4">
+                  <div
+                    class="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-3"
+                  >
+                    <i class="fa-solid fa-check text-2xl text-accent"></i>
+                  </div>
+                  <p class="font-semibold text-lg">
+                    Message sent successfully!
+                  </p>
+                  <p class="text-sm text-[#94A3B8]">
+                    I'll get back to you shortly.
+                  </p>
+                </div>
+              </form>
+            </div>
+            <div class="reveal space-y-6">
+              <h3 class="font-display text-2xl font-bold mb-6">
+                Other ways to reach me
+              </h3>
+              <a
+                href="mailto:chikadibiauchechukwu@gmail.com"
+                class="glass-card rounded-xl p-5 flex items-center gap-4 group hover:scale-[1.02] transition-all"
+              >
+                <div
+                  class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all"
+                >
+                  <i class="fa-solid fa-envelope text-primary text-lg"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-[#94A3B8]">Email</p>
+                  <p class="font-medium">chikadibiauchechukwu@gmail.com</p>
+                </div>
+              </a>
+              <a
+                href="https://wa.me/2348107620605"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="glass-card rounded-xl p-5 flex items-center gap-4 group hover:scale-[1.02] transition-all"
+              >
+                <div
+                  class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-all"
+                >
+                  <i class="fa-brands fa-whatsapp text-accent text-lg"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-[#94A3B8]">WhatsApp</p>
+                  <p class="font-medium">+234 810 762 0605</p>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="glass-card rounded-xl p-5 flex items-center gap-4 group hover:scale-[1.02] transition-all"
+              >
+                <div
+                  class="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 transition-all"
+                >
+                  <i
+                    class="fa-brands fa-linkedin-in text-secondary text-lg"
+                  ></i>
+                </div>
+                <div>
+                  <p class="text-sm text-[#94A3B8]">LinkedIn</p>
+                  <p class="font-medium">linkedin.com/in/louis-betrands-840a633a2</p>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="glass-card rounded-xl p-5 flex items-center gap-4 group hover:scale-[1.02] transition-all"
+              >
+                <div
+                  class="w-11 h-11 rounded-xl bg-highlight/10 flex items-center justify-center group-hover:bg-highlight/20 transition-all"
+                >
+                  <i class="fa-brands fa-github text-highlight text-lg"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-[#94A3B8]">GitHub</p>
+                  <p class="font-medium">github.com/chikadibiauchechukwu-collab</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/5 py-10">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6"
+      >
+        <a href="index.html" class="logo"
+          ><div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+          Louis<span class="text-primary">Dev</span></a
+        >
+        <p class="text-sm text-[#94A3B8]">
+          &copy; 2026 Louis Dev. All rights reserved.
+        </p>
+        <div class="flex items-center gap-4">
+          <a
+            href="https://github.com/chikadibiauchechukwu-collab"
+            aria-label="GitHub"
+            class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"
+            ><i class="fa-brands fa-github text-lg"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/louis-betrands-840a633a2"
+            aria-label="LinkedIn"
+            class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"
+            ><i class="fa-brands fa-linkedin-in text-lg"></i
+          ></a>
+          <a
+            href="https://x.com/Chikadibia24062"
+            aria-label="Twitter"
+            class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"
+            ><i class="fa-brands fa-x-twitter text-lg"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/2348107620605"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+      class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-accent hover:bg-accent-dark shadow-xl shadow-accent/30 hover:shadow-accent/50 transition-all duration-300 hover:scale-110 flex items-center justify-center text-white text-xl"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Louis Dev - Frontend developer with 6+ years of experience crafting digital experiences.">
+    <title>About | Louis Dev</title>
+     <link rel="icon" type="image/png" href="img/portfolio-img.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: { DEFAULT: '#7C3AED', light: '#A855F7', dark: '#6D28D9' },
+                        secondary: { DEFAULT: '#06B6D4', light: '#22D3EE' },
+                        accent: { DEFAULT: '#22C55E', light: '#4ADE80' },
+                        highlight: { DEFAULT: '#F59E0B' },
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#050816] text-[#F8FAFC] font-sans antialiased">
+
+    <a href="#about" class="skip-link">Skip to main content</a>
+    <div id="page-overlay" class="fixed inset-0 z-[9999] bg-[#050816] pointer-events-none opacity-0 transition-opacity duration-400"></div>
+
+    <!-- NAVIGATION -->
+    <header id="navbar" class="navbar" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+                <span>Louis<span class="text-primary">Dev</span></span>
+            </a>
+            <nav class="nav-menu" aria-label="Main navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="journey.html" class="nav-link">Journey</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-right">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+                    <i id="theme-icon" class="fa-solid fa-sun"></i>
+                </button>
+                <a href="contact.html" class="cta-button desktop-only">Get In Touch <i class="fa-solid fa-arrow-right"></i></a>
+                <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-overlay" id="mobileOverlay"></div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <a href="index.html" class="logo"><div class="logo-icon"><i class="fa-solid fa-cube"></i></div>Louis<span class="text-primary">Dev</span></a>
+                <button class="mobile-close" id="mobileClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="mobile-links">
+                <a href="index.html" class="mobile-link">Home</a>
+                <a href="about.html" class="mobile-link active">About</a>
+                <a href="projects.html" class="mobile-link">Projects</a>
+                <a href="services.html" class="mobile-link">Services</a>
+                <a href="journey.html" class="mobile-link">Journey</a>
+                <a href="contact.html" class="mobile-link">Contact</a>
+            </div>
+            <div class="mobile-cta">
+                <a href="contact.html" class="cta-button" style="width:100%;justify-content:center;">Get In Touch <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20 lg:pt-24">
+        <section class="py-16 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <span class="reveal text-sm font-semibold text-primary uppercase tracking-widest">About Me</span>
+                <h1 class="reveal font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 mb-6">The man behind the code</h1>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-12">
+                    <div class="reveal flex justify-center">
+                        <div class="w-72 h-72 sm:w-96 sm:h-96 rounded-3xl bg-gradient-to-br from-primary/20 to-secondary/10 flex items-center justify-center border border-white/5 relative overflow-hidden">
+                            <i class="fa-solid fa-user text-8xl text-primary/10 absolute -bottom-4 -right-4"></i>
+                            <span class="text-9xl font-display font-bold text-primary/20"><img src="img/profile-2.png" padd alt=""></span>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="reveal font-display text-2xl sm:text-3xl font-bold mb-6">Hi, I'm Louis Dev</h2>
+                        <div class="reveal space-y-4 text-[#94A3B8] leading-relaxed text-lg">
+                            <p>Based in Rivers State, Nigeria, I've been crafting digital products for over 2+ years. What started as a fascination with how websites work turned into a career building them for startups, agencies, and global brands.</p>
+                            <p>I specialize in modern frontend technologies – React, Next.js, TypeScript – but my real passion lies in the intersection of design and engineering. I believe the best products come from truly understanding both the user and the code.</p>
+                            <p>When I'm not pushing pixels, you'll find me contributing to open‑source, mentoring aspiring developers, or exploring the latest in AI and interactive design.</p>
+                        </div>
+                        <div class="reveal flex flex-wrap gap-2 mt-6">
+                            <span class="text-xs font-medium px-3 py-1 rounded-full bg-primary/10 text-primary">Javascript</span>
+                            <span class="text-xs font-medium px-3 py-1 rounded-full bg-secondary/10 text-secondary">TypeScript</span>
+                            <span class="text-xs font-medium px-3 py-1 rounded-full bg-accent/10 text-accent">Ui Designs</span>
+                            <span class="text-xs font-medium px-3 py-1 rounded-full bg-highlight/10 text-highlight">Tailwind CSS</span>
+                            <span class="text-xs font-medium px-3 py-1 rounded-full bg-pink-500/10 text-pink-400">Figma</span>
+                            <span class="text-xs font-medium px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400">CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Experience Timeline (condensed) -->
+                <div class="mt-20">
+                    <h2 class="reveal font-display text-3xl font-bold mb-10 text-center">My journey</h2>
+                    <div class="space-y-8 max-w-4xl mx-auto">
+                        <div class="reveal flex gap-4 items-start">
+                            <div class="w-1 h-full bg-primary/20 rounded-full relative mt-1">
+                                <div class="w-3 h-3 rounded-full bg-primary absolute -left-1 top-0"></div>
+                            </div>
+                            <div class="glass-card rounded-xl p-5 flex-1">
+                                <span class="text-xs text-primary font-semibold">2024 – Present</span>
+                                <h3 class="font-display font-bold text-lg">Senior Frontend Engineer, TechVista Inc.</h3>
+                                <p class="text-sm text-[#94A3B8]">Leading frontend architecture for analytics platform. Improved performance by 35% and mentored team of 5.</p>
+                            </div>
+                        </div>
+                        <div class="reveal flex gap-4 items-start">
+                            <div class="w-1 h-full bg-secondary/20 rounded-full relative mt-1">
+                                <div class="w-3 h-3 rounded-full bg-secondary absolute -left-1 top-0"></div>
+                            </div>
+                            <div class="glass-card rounded-xl p-5 flex-1">
+                                <span class="text-xs text-secondary font-semibold">2022 – 2024</span>
+                                <h3 class="font-display font-bold text-lg">Frontend Developer, NexGen Digital</h3>
+                                <p class="text-sm text-[#94A3B8]">Built 8+ e‑commerce storefronts. Created custom theming engine cutting setup time by 60%.</p>
+                            </div>
+                        </div>
+                        <div class="reveal flex gap-4 items-start">
+                            <div class="w-1 h-full bg-accent/20 rounded-full relative mt-1">
+                                <div class="w-3 h-3 rounded-full bg-accent absolute -left-1 top-0"></div>
+                            </div>
+                            <div class="glass-card rounded-xl p-5 flex-1">
+                                <span class="text-xs text-accent font-semibold">2019 – 2022</span>
+                                <h3 class="font-display font-bold text-lg">Junior Developer & Freelancer</h3>
+                                <p class="text-sm text-[#94A3B8]">Started career building marketing sites and landing pages. Grew freelance practice to 15+ clients.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/5 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <a href="index.html" class="logo"><div class="logo-icon"><i class="fa-solid fa-cube"></i></div> Louis<span class="text-primary">Dev</span></a>
+            <p class="text-sm text-[#94A3B8]">&copy; 2026 Louis Dev. All rights reserved.</p>
+            <div class="flex items-center gap-4">
+                <a href="https://github.com/chikadibiauchechukwu-collab" aria-label="GitHub" class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="https://www.linkedin.com/in/louis-betrands-840a633a2" aria-label="LinkedIn" class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+                <a href="https://x.com/Chikadibia24062" aria-label="Twitter" class="w-10 h-10 rounded-lg flex items-center justify-center text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-all"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
